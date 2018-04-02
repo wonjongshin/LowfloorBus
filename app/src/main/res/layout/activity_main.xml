@@ -1,0 +1,145 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/starting_2"
+         
+        >
+
+        <LinearLayout
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#116699" >
+
+                <TextView
+                    android:id="@+id/main_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10sp"
+                    android:text="BUS"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/main_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10sp"
+                    android:text="-About ESP-"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:layout_weight="0.62"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="108dp"
+                    android:layout_height="113dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/starting_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="45dp"
+                    android:text="제 작 : ESP Solution"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:text="팀 원 : 이상규, 신원종, 박지호"
+                    android:textSize="10pt"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:text="소 개 : &apos;Low Bus Notifier&apos;는 몸이 불편한 노약자, 장애인들이 저상버스 알리미 App을 통해 편리하고 쉽게 이용할 수 있도록 제작"
+                    android:textSize="10pt"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:text="- 동국대학교 정보통신공학과 -"
+                    android:textSize="10pt"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+    
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+          
+         >
+        <ImageView
+            android:id="@+id/menu_btn_num"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bus"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:id="@+id/menu_btn_location"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map"
+            android:adjustViewBounds="true"
+            />
+            
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/menu_btn_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/history"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/menu_btn_esp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/esp"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    </LinearLayout>

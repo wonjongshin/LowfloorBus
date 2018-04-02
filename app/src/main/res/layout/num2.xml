@@ -1,0 +1,111 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/starting_2"
+         
+        >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#116699"
+         >
+        <TextView
+            android:paddingLeft="10sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:text="BUS" 
+            />
+        <TextView
+          android:layout_weight="1"
+            android:paddingRight="10sp"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:text="버스번호로 찾기" 
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/num2_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+             />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/num2_listView"
+         android:listSelector="#eaeaea"        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+ 
+</LinearLayout>    
+        
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          
+         >
+        <ImageView
+            android:id="@+id/num2_btn_num"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bus"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:id="@+id/num2_btn_location"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inver_map"
+            android:adjustViewBounds="true"
+            />
+            
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/num2_btn_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inver_history"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/num2_btn_esp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inver_esp"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    </LinearLayout>
