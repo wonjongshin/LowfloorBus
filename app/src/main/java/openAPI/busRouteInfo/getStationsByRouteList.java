@@ -19,7 +19,7 @@ public class getStationsByRouteList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/busRouteInfo/";
 	String function = "getStaionByRoute";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&busRouteId=";
@@ -29,15 +29,17 @@ public class getStationsByRouteList extends Thread {
 	public getStationsByRouteList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getStationsByRouteList(Handler phandler, int pwhat, String parameter1) {
+	public getStationsByRouteList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1);
 		
 	}

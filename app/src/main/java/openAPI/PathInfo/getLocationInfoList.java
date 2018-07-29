@@ -18,7 +18,7 @@ public class getLocationInfoList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/pathinfo/";
 	String function = "getLocationInfo";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&srch=";
@@ -28,15 +28,17 @@ public class getLocationInfoList extends Thread {
 	public getLocationInfoList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getLocationInfoList(Handler phandler, int pwhat, String parameter1) {
+	public getLocationInfoList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1);
 		
 	}

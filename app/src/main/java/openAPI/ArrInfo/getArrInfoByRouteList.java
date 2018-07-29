@@ -18,7 +18,7 @@ public class getArrInfoByRouteList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/arrive/";
 	String function = "getArrInfoByRoute";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&busRouteId=";
@@ -30,15 +30,17 @@ public class getArrInfoByRouteList extends Thread {
 	public getArrInfoByRouteList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("", "", "");
 		
 	}
 	
-	public getArrInfoByRouteList(Handler phandler, int pwhat, String parameter1, String parameter2, String parameter3) {
+	public getArrInfoByRouteList(Handler phandler, int pwhat, String serviceKey, String parameter1, String parameter2, String parameter3) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1, parameter2, parameter3);
 		
 	}

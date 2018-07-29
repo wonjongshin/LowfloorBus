@@ -18,7 +18,7 @@ public class getLowArrInfoByStIdList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/arrive/";
 	String function = "getLowArrInfoByStId";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&stId=";
@@ -28,15 +28,17 @@ public class getLowArrInfoByStIdList extends Thread {
 	public getLowArrInfoByStIdList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getLowArrInfoByStIdList(Handler phandler, int pwhat, String parameter1) {
+	public getLowArrInfoByStIdList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1);
 		
 	}

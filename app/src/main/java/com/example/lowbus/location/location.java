@@ -228,8 +228,14 @@ public class location extends FragmentActivity implements LocationListener, OnCl
 	        lat = location.getLatitude(); // 위도
 	        lng = location.getLongitude(); // 경도
 
-			getstationsbyposlist = new getStationsByPosList( apihandler, 0, 
-					""+lng, ""+lat, "1000" );
+			getstationsbyposlist = new getStationsByPosList(
+					apihandler,
+					0,
+					getString(R.string.openapi_key),
+					""+lng,
+					""+lat,
+					"1000"
+			);
 			getstationsbyposlist.start(); // Data parsing 완료 시 전달 받은 핸들러로 sendemptyMessage(mwhat)을 호출한다.
 	        
     	}

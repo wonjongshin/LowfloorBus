@@ -18,7 +18,7 @@ public class getLowStationByNameList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/stationinfo/";
 	String function = "getLowStationByName";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&stSrch=";
@@ -28,17 +28,19 @@ public class getLowStationByNameList extends Thread {
 	public getLowStationByNameList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+        this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getLowStationByNameList(Handler phandler, int pwhat, String parameter1) {
+	public getLowStationByNameList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+        this.servicekey = serviceKey;
 		setParam(parameter1);
-		
+
 	}
 	
 	public void setParam(String parameter1) {

@@ -85,7 +85,12 @@ public class num extends FragmentActivity  {
 			public void onClick(View v) {
 				mPdProgress.show(); // ProgressDialog 시작
 
-				getlowstationbynamelist = new getLowStationByNameList( apihandler, 0, et.getText().toString() );
+				getlowstationbynamelist = new getLowStationByNameList(
+						apihandler,
+						0,
+                        getString(R.string.openapi_key),
+						et.getText().toString()
+				);
 				getlowstationbynamelist.start(); // Data parsing 완료 시 전달 받은 핸들러로 sendemptyMessage(mwhat)을 호출한다.
 			
 			}

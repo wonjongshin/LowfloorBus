@@ -193,7 +193,12 @@ public class num_2 extends FragmentActivity {
 		
 		arsId = extravalue.substring(extravalue.indexOf('(')+1, extravalue.length()-1);
 
-		getroutebystationlist = new getRouteByStationList( apihandler, 0, arsId );
+		getroutebystationlist = new getRouteByStationList(
+				apihandler,
+				0,
+				getString(R.string.openapi_key),
+				arsId
+		);
 		getroutebystationlist.start(); // Data parsing 완료 시 전달 받은 핸들러로 sendemptyMessage(mwhat)을 호출한다.
 	}
 	

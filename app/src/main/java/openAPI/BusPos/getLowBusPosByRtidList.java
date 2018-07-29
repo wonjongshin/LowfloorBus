@@ -18,7 +18,7 @@ public class getLowBusPosByRtidList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/buspos/";
 	String function = "getLowBusPosByRtid";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&busRouteId=";
@@ -28,15 +28,17 @@ public class getLowBusPosByRtidList extends Thread {
 	public getLowBusPosByRtidList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getLowBusPosByRtidList(Handler phandler, int pwhat, String parameter1) {
+	public getLowBusPosByRtidList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1);
 		
 	}

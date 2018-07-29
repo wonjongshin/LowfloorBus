@@ -204,7 +204,12 @@ public class num3 extends FragmentActivity {
 		
 		mPdProgress.show(); // ProgressDialog 시작
 		
-		getstationsbyroutelist = new getStationsByRouteList( apihandler, 0, busrouteid );
+		getstationsbyroutelist = new getStationsByRouteList(
+				apihandler,
+				0,
+				getString(R.string.openapi_key),
+				busrouteid
+		);
 		getstationsbyroutelist.start(); // Data parsing 완료 시 전달 받은 핸들러로 sendemptyMessage(mwhat)을 호출한다.
 	}
 	
@@ -252,7 +257,12 @@ public class num3 extends FragmentActivity {
 					
 				}
 				
-				getlowbuspobyrtidlist = new getLowBusPosByRtidList(apihandler, 1, busrouteid);
+				getlowbuspobyrtidlist = new getLowBusPosByRtidList(
+				        apihandler,
+                        1,
+                        getString(R.string.openapi_key),
+                        busrouteid
+                );
 				getlowbuspobyrtidlist.start();
 				
 				break;

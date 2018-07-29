@@ -21,7 +21,7 @@ public class getStationByNameList extends Thread {
 
 	String addr = "http://ws.bus.go.kr/api/rest/stationinfo/";
 	String function = "getStationByName";
-	String servicekey = YOUR_OPENAPI_KEY_HERE;
+	String servicekey;
 
 	String fullparam = "";
 	String param1 = "&stSrch=";
@@ -31,15 +31,17 @@ public class getStationByNameList extends Thread {
 	public getStationByNameList(Handler phandler, int pwhat) {
 		mhandler = phandler;
 		mwhat = pwhat;
-		
+
+		this.servicekey = "";
 		setParam("");
 		
 	}
 	
-	public getStationByNameList(Handler phandler, int pwhat, String parameter1) {
+	public getStationByNameList(Handler phandler, int pwhat, String serviceKey, String parameter1) {
 		mhandler = phandler;
 		mwhat = pwhat;
 
+		this.servicekey = serviceKey;
 		setParam(parameter1);
 		
 	}
